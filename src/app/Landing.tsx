@@ -34,6 +34,7 @@ export default function Landing() {
             justifyContent: 'center',
             pt: { xs: 16, sm: 12, md: 4 }, // Even more top padding for mobile
             mt: { xs: 4, sm: 4, md: 0 },
+            paddingTop: '64vh',
           }}
         >
           {/* Left Side - Hero Section */}
