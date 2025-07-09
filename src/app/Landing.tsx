@@ -12,12 +12,14 @@ import Footer from '../components/Footer';
 
 export default function Landing() {
   return (
-    <Box>
+    <Box sx={{ 
+      pt: { xs: 16, sm: 10, md: 0 }, 
+      }}>
       {/* Hero Section */}
       <Container maxWidth="xl" sx={{ 
         py: { xs: 6, md: 4 }, 
         px: { xs: 3, sm: 4, md: 6, lg: 8 },
-        pt: { xs: 16, sm: 12, md: 4 }, // Adjusted padding to ensure hero section is visible above the fold
+        pt: { xs: 32, sm: 20, md: 4 }, // Adjusted padding to ensure hero section is visible above the fold
       }}>
         <Box
           className="hero-section-container"
