@@ -28,6 +28,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fix for navbar overlap on mobile */
+@media screen and (max-width: 600px) {
+  .hero-section-container {
+    padding-top: 80px !important;
+    margin-top: 20px !important;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

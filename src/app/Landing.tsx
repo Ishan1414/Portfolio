@@ -14,18 +14,26 @@ export default function Landing() {
   return (
     <Box>
       {/* Hero Section */}
-      <Container maxWidth="xl" sx={{ py: { xs: 6, md: 4 }, px: { xs: 3, sm: 4, md: 6, lg: 8 } }}>
+      <Container maxWidth="xl" sx={{ 
+        py: { xs: 6, md: 4 }, 
+        px: { xs: 3, sm: 4, md: 6, lg: 8 },
+      }}>
         <Box
+          className="hero-section-container"
           sx={{
             display: 'flex',
             alignItems: 'center',
-            minHeight: '100vh',
+            minHeight: {
+              xs: 'calc(100vh)',
+              sm: 'calc(100vh)',
+              md: '90vh'
+            },
             gap: { xs: 4, md: 6, lg: 8 },
             flexDirection: { xs: 'column', md: 'row' },
             px: { xs: 4, sm: 6, md: 8, lg: 10 },
             justifyContent: 'center',
-            pt: { xs: 8, sm: 6, md: 4 }, // Significantly increased top padding for mobile
-            mt: { xs: 0, md: 0 },
+            pt: { xs: 16, sm: 12, md: 4 }, // Even more top padding for mobile
+            mt: { xs: 4, sm: 4, md: 0 },
           }}
         >
           {/* Left Side - Hero Section */}
