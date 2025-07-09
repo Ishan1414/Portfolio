@@ -9,8 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isGitHubPages ? `/${Portfolio}` : '',
-  assetPrefix: isGitHubPages ? `/${Portfolio}/` : '',
+  basePath: isGitHubPages ? `/${repoName}` : '',
+  assetPrefix: isGitHubPages ? `/${repoName}/` : '',
   trailingSlash: true,
 };
 
