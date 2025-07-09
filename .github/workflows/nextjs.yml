@@ -75,6 +75,20 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Copy public directory content to out folder
+        run: |
+          cp -r public/* out/ || echo "No public folder found to copy"
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
+      - name: Fix public asset paths
+        run: |
+          cd out
+          find . -type f -name "*.html" -exec sed -i 's|href="/_next/|href="./\_next/|g' {} \;
+          find . -type f -name "*.html" -exec sed -i 's|src="/_next/|src="./\_next/|g' {} \;
+          find . -type f -name "*.html" -exec sed -i 's|href="/_next/static|href="./\_next/static|g' {} \;
+          find . -type f -name "*.html" -exec sed -i 's|"/_next/static|"./\_next/static|g' {} \;
+          find . -type f -name "*.html" -exec sed -i 's|"/_next/|"./\_next/|g' {} \;
+          find . -type f -name "*.js" -exec sed -i 's|"/_next/|"./\_next/|g' {} \;
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
