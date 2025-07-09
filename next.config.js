@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const repoName = 'Portfolio'; 
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -6,7 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
+  basePath: isGitHubPages ? `/${Portfolio}` : '',
+  assetPrefix: isGitHubPages ? `/${Portfolio}/` : '',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

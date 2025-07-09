@@ -85,6 +85,7 @@ export default function HeroSection() {
         textAlign: { xs: 'center', md: 'left' },
         gap: 3,
         maxWidth: { xs: '100%', md: '50%' },
+        pt: { xs: 8, sm: 6, md: 0 }, // Add padding top specifically to the hero section
       }}
     >
       {/* Name and Title */}

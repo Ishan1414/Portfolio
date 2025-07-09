@@ -89,8 +89,9 @@ export default function AtomAnimation() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: 500,
+        minHeight: { xs: 350, sm: 400, md: 500 },
         maxWidth: { xs: '100%', md: '50%' },
+        mt: { xs: 6, sm: 0 }, // Add top margin only on mobile devices
       }}
     >
       <motion.div
@@ -101,17 +102,13 @@ export default function AtomAnimation() {
         <Box
           sx={{
             position: 'relative',
-            width: 500,
-            height: 500,
+            width: { xs: 320, sm: 400, md: 500 },
+            height: { xs: 320, sm: 400, md: 500 },
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             perspective: '1000px',
             margin: '0 auto',
-            '@media (max-width: 768px)': {
-              width: 400,
-              height: 400,
-            }
           }}
         >
           {/* Central Profile Picture */}
