@@ -70,7 +70,6 @@ function TypingAnimation() {
 }
 
 const handleViewResume = () => {
-  // Open Google Drive PDF viewer in a new tab
   window.open('https://drive.google.com/file/d/11Ewvknu3jfwFED3ePseX-WE9zyMGwNsj/view', '_blank');
 };
 
@@ -85,7 +84,7 @@ export default function HeroSection() {
         textAlign: { xs: 'center', md: 'left' },
         gap: 3,
         maxWidth: { xs: '100%', md: '50%' },
-        pt: { xs: 8, sm: 6, md: 0 }, // Add padding top specifically to the hero section
+        pt: 0,
       }}
     >
       {/* Name and Title */}
@@ -175,22 +174,15 @@ export default function HeroSection() {
         </Button>
       </motion.div>
 
-      {/* Global Styles for Animations */}
       <style jsx global>{`
         @keyframes blink {
           0%, 50% { opacity: 1; }
           51%, 100% { opacity: 0; }
         }
         @keyframes gradientShift {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
       `}</style>
     </Box>

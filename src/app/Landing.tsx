@@ -19,12 +19,12 @@ export default function Landing() {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            minHeight: { xs: '100vh', sm: '90vh' },
+            minHeight: '100vh',
             gap: { xs: 4, md: 6, lg: 8 },
             flexDirection: { xs: 'column', md: 'row' },
             px: { xs: 4, sm: 6, md: 8, lg: 10 },
             justifyContent: 'center',
-            pt: { xs: 16, sm: 12, md: 4 }, // Significantly increased top padding for mobile
+            pt: { xs: 8, sm: 6, md: 4 }, // Significantly increased top padding for mobile
             mt: { xs: 0, md: 0 },
           }}
         >
