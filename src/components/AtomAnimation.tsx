@@ -91,7 +91,8 @@ export default function AtomAnimation() {
         justifyContent: 'center',
         minHeight: { xs: 350, sm: 400, md: 500 },
         maxWidth: { xs: '100%', md: '50%' },
-        mt: { xs: 6, sm: 0 }, // Add top margin only on mobile devices
+        mt: { xs: 6, sm: 0 },
+        mb: { xs: 4},// Add top margin only on mobile devices
       }}
     >
       <motion.div
