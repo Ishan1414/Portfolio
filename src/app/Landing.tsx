@@ -17,6 +17,7 @@ export default function Landing() {
       <Container maxWidth="xl" sx={{ 
         py: { xs: 6, md: 4 }, 
         px: { xs: 3, sm: 4, md: 6, lg: 8 },
+        paddingTop: '64vh', // Adjusted padding to ensure hero section is visible above the fold
       }}>
         <Box
           className="hero-section-container"
