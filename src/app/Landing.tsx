@@ -24,6 +24,7 @@ export default function Landing() {
             flexDirection: { xs: 'column', md: 'row' },
             px: { xs: 4, sm: 6, md: 8, lg: 10 },
             justifyContent: 'center',
+            pt: { xs: 10, sm: 6, md: 4 }, // Added more top padding for mobile
           }}
         >
           {/* Left Side - Hero Section */}

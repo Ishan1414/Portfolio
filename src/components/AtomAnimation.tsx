@@ -4,66 +4,68 @@ import React, { useState, useEffect } from 'react';
 import { Box, Avatar, Tooltip } from '@mui/material';
 import { motion } from 'framer-motion';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const skillsIcons = [
   { 
     category: 'Languages',
     icons: [
-      { name: 'Java', src: '/devicon/java-original.svg', color: '#ED8B00' },
-      { name: 'JavaScript', src: '/devicon/javascript-original.svg', color: '#F7DF1E' },
-      { name: 'TypeScript', src: '/devicon/typescript-original.svg', color: '#3178C6' },
-      { name: 'HTML', src: '/devicon/html5-original.svg', color: '#E34F26' },
-      { name: 'CSS', src: '/devicon/css3-original.svg', color: '#1572B6' }
+      { name: 'Java', src: `${basePath}/devicon/java-original.svg`, color: '#ED8B00' },
+      { name: 'JavaScript', src: `${basePath}/devicon/javascript-original.svg`, color: '#F7DF1E' },
+      { name: 'TypeScript', src: `${basePath}/devicon/typescript-original.svg`, color: '#3178C6' },
+      { name: 'HTML', src: `${basePath}/devicon/html5-original.svg`, color: '#E34F26' },
+      { name: 'CSS', src: `${basePath}/devicon/css3-original.svg`, color: '#1572B6' }
     ], 
     orbit: 200, 
     size: 45, 
-    speed: 9, // Reduced from 25
+    speed: 9, 
     delay: 0, 
     startAngle: 0 
   },
   { 
     category: 'Frameworks',
     icons: [
-      { name: 'React', src: '/devicon/react-original.svg', color: '#61DAFB' },
-      { name: 'Node.js', src: '/devicon/nodejs-original.svg', color: '#339933' },
+      { name: 'React', src: `${basePath}/devicon/react-original.svg`, color: '#61DAFB' },
+      { name: 'Node.js', src: `${basePath}/devicon/nodejs-original.svg`, color: '#339933' },
       { name: 'Express', src: 'https://cdn.simpleicons.org/express/FFFFFF', color: '#000000' },
-      { name: 'Spring', src: '/devicon/spring-original.svg', color: '#6DB33F' },
-      { name: 'JUnit', src: '/devicon/java-original.svg', color: '#25A162' },
-      { name: 'Jest', src: '/devicon/jest-plain.svg', color: '#C21325' },
-      { name: 'Cypress', src: '/devicon/cypressio-original.svg', color: '#ffffff' }
+      { name: 'Spring', src: `${basePath}/devicon/spring-original.svg`, color: '#6DB33F' },
+      { name: 'JUnit', src: `${basePath}/devicon/java-original.svg`, color: '#25A162' },
+      { name: 'Jest', src: `${basePath}/devicon/jest-plain.svg`, color: '#C21325' },
+      { name: 'Cypress', src: `${basePath}/devicon/cypressio-original.svg`, color: '#ffffff' }
     ], 
     orbit: 160, 
     size: 42, 
-    speed: -7, // Reduced from -18
+    speed: -7, 
     delay: 0, 
     startAngle: 45 
   },
   { 
     category: 'Databases',
     icons: [
-      { name: 'MSSQL', src: '/devicon/microsoftsqlserver-plain.svg', color: '#CC2927' },
-      { name: 'PostgreSQL', src: '/devicon/postgresql-original.svg', color: '#336791' },
-      { name: 'MySQL', src: '/devicon/mysql-original.svg', color: '#4479A1' },
-      { name: 'MongoDB', src: '/devicon/mongodb-original.svg', color: '#47A248' },
-      { name: 'Redis', src: '/devicon/redis-original.svg', color: '#DC382D' }
+      { name: 'MSSQL', src: `${basePath}/devicon/microsoftsqlserver-plain.svg`, color: '#CC2927' },
+      { name: 'PostgreSQL', src: `${basePath}/devicon/postgresql-original.svg`, color: '#336791' },
+      { name: 'MySQL', src: `${basePath}/devicon/mysql-original.svg`, color: '#4479A1' },
+      { name: 'MongoDB', src: `${basePath}/devicon/mongodb-original.svg`, color: '#47A248' },
+      { name: 'Redis', src: `${basePath}/devicon/redis-original.svg`, color: '#DC382D' }
     ], 
     orbit: 120, 
     size: 38, 
-    speed: 7.5, // Reduced from 22
+    speed: 7.5, 
     delay: 0, 
     startAngle: 90 
   },
   { 
     category: 'Cloud',
     icons: [
-      { name: 'Docker', src: '/devicon/docker-original.svg', color: '#2496ED' },
-      { name: 'Kubernetes', src: '/devicon/kubernetes-plain.svg', color: '#326CE5' },
-      { name: 'AWS', src: '/devicon/amazonwebservices-plain-wordmark.svg', color: '#FF9900' },
-      { name: 'Azure', src: '/devicon/azure-original.svg', color: '#0078D4' },
-      { name: 'GCP', src: '/devicon/googlecloud-original.svg', color: '#4285F4' }
+      { name: 'Docker', src: `${basePath}/devicon/docker-original.svg`, color: '#2496ED' },
+      { name: 'Kubernetes', src: `${basePath}/devicon/kubernetes-plain.svg`, color: '#326CE5' },
+      { name: 'AWS', src: `${basePath}/devicon/amazonwebservices-plain-wordmark.svg`, color: '#FF9900' },
+      { name: 'Azure', src: `${basePath}/devicon/azure-original.svg`, color: '#0078D4' },
+      { name: 'GCP', src: `${basePath}/devicon/googlecloud-original.svg`, color: '#4285F4' }
     ], 
     orbit: 80, 
     size: 35, 
-    speed: -6, // Reduced from -15
+    speed: -6, 
     delay: 0, 
     startAngle: 135 
   },
@@ -74,7 +76,7 @@ export default function AtomAnimation() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationTime(prev => prev + 0.02); // Reduced from 0.05 to slow down the animation further
+      setAnimationTime(prev => prev + 0.02);
     }, 50);
 
     return () => clearInterval(interval);
@@ -120,7 +122,7 @@ export default function AtomAnimation() {
             }}
           >
             <Avatar
-              src="/photo.jpg"
+              src={`${basePath}/photo.jpg`}
               alt="Ishan Sarode"
               sx={{
                 width: 100,
@@ -128,7 +130,6 @@ export default function AtomAnimation() {
                 border: '4px solid #FFD700',
                 boxShadow: '0 0 40px rgba(255, 215, 0, 0.7)',
                 imageRendering: 'auto'
-                // Removed pulsating animation
               }}
             />
           </Box>
@@ -136,7 +137,6 @@ export default function AtomAnimation() {
           {/* Skill Orbits */}
           {skillsIcons.map((skillGroup, groupIndex) => (
             <Box key={groupIndex}>
-              {/* Orbit Ring */}
               <Box
                 sx={{
                   position: 'absolute',
@@ -159,7 +159,6 @@ export default function AtomAnimation() {
                 }}
               />
 
-              {/* Skill Icons */}
               {skillGroup.icons.map((iconData, iconIndex) => {
                 const angle = (skillGroup.startAngle + (iconIndex * 360 / skillGroup.icons.length) + (animationTime * skillGroup.speed)) * (Math.PI / 180);
                 const x = Math.cos(angle) * skillGroup.orbit;
@@ -229,10 +228,7 @@ export default function AtomAnimation() {
         </Box>
       </motion.div>
 
-      {/* Global Styles for Animations */}
       <style jsx global>{`
-        /* Removed pulse animation */
-        
         @keyframes rotate {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
