@@ -79,9 +79,9 @@ export default function ContactPage() {
         </motion.div>
 
         {/* Contact Grid */}
-        <Grid container spacing={4}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '7fr 5fr' }, gap: 4 }}>
           {/* Contact Form */}
-          <Grid item xs={12} md={7}>
+          <Box>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -89,10 +89,10 @@ export default function ContactPage() {
             >
               <ContactForm visible={isVisible} />
             </motion.div>
-          </Grid>
+          </Box>
           
           {/* Contact Info and Social Media */}
-          <Grid item xs={12} md={5}>
+          <Box>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -110,8 +110,8 @@ export default function ContactPage() {
             >
               <SocialMediaSection visible={isVisible} />
             </motion.div>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

@@ -11,8 +11,6 @@ import NewLoaderAnimation from '@/components/NewLoaderAnimation'
 import { Box } from '@mui/material'
 import { usePathname } from 'next/navigation'
 
-
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
@@ -29,11 +27,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/photo.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/photo.jpg" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />

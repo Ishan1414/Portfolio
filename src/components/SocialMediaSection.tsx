@@ -91,13 +91,14 @@ const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({ visible }) => {
     <Paper
       elevation={0}
       sx={{
-        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+        backgroundColor: 'rgba(15, 15, 15, 0.9)',
         backdropFilter: 'blur(10px)',
         borderRadius: 3,
-        p: { xs: 3, md: 4 },
+        p: { xs: 3, md: 3.5 },
         boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
         border: '1px solid rgba(255, 255, 255, 0.07)',
         transition: 'box-shadow 0.3s ease',
+        overflow: 'hidden',
         '&:hover': {
           boxShadow: '0 15px 30px rgba(0,0,0,0.4), 0 0 30px rgba(255, 215, 0, 0.05)',
         },
@@ -114,25 +115,26 @@ const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({ visible }) => {
           justifyContent: 'center',
           position: 'relative',
           textAlign: 'center',
+          fontSize: '1.75rem',
           '&::after': {
             content: '""',
             position: 'absolute',
-            bottom: '-8px',
-            width: '80px',
-            height: '3px',
+            bottom: '-10px',
+            width: '140px',
+            height: '2px',
             background: 'linear-gradient(90deg, transparent, #FFD700, transparent)',
             borderRadius: '3px',
           }
         }}
       >
-        <Language sx={{ mr: 1.5 }} /> 
+        <Language sx={{ mr: 1.5, fontSize: 28 }} /> 
         Connect With Me
       </Typography>
         
       <Box sx={{ 
         display: 'grid', 
-        gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
-        gap: 2.5
+        gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)' },
+        gap: 2
       }}>
         {socialMedia.map((social, index) => (
           <Box
@@ -143,53 +145,39 @@ const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({ visible }) => {
             rel="noopener noreferrer"
             sx={{
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              p: 2.5,
+              justifyContent: 'center',
+              p: 2,
               borderRadius: 2,
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
+              backgroundColor: 'rgba(20, 20, 20, 0.7)',
               border: '1px solid rgba(255, 255, 255, 0.05)',
-              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
               textDecoration: 'none',
               color: 'white',
-              overflow: 'hidden',
-              position: 'relative',
+              height: '100%',
+              textAlign: 'center',
               backdropFilter: 'blur(5px)',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                background: `linear-gradient(45deg, ${social.color}22, transparent)`,
-                opacity: 0,
-                transition: 'opacity 0.3s ease',
-              },
               '&:hover': {
-                transform: 'translateY(-5px) scale(1.03)',
-                boxShadow: `0 10px 20px ${social.color}33, 0 0 15px ${social.color}22`,
+                transform: 'translateY(-3px)',
+                boxShadow: `0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px ${social.color}22`,
                 border: `1px solid ${social.color}66`,
-                '&::before': {
-                  opacity: 1,
-                },
               },
-              animation: `${floatAnimation} ${6 + index * 0.5}s ease-in-out infinite ${index * 0.5}s`,
             }}
           >
             <Avatar
               sx={{
-                bgcolor: 'rgba(255, 255, 255, 0.05)',
+                bgcolor: 'transparent',
                 color: social.color,
-                mr: 2,
-                transition: 'background-color 0.3s ease',
-                '.MuiBox-root:hover &': {
-                  bgcolor: `${social.hoverColor}22`,
-                },
+                mb: 1.5,
+                width: 42,
+                height: 42,
                 '& .MuiSvgIcon-root': {
-                  transition: 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                  fontSize: 28,
+                  transition: 'transform 0.4s ease',
                 },
                 '.MuiBox-root:hover & .MuiSvgIcon-root': {
-                  transform: 'rotate(360deg) scale(1.2)',
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -203,10 +191,8 @@ const SocialMediaSection: React.FC<SocialMediaSectionProps> = ({ visible }) => {
                 variant="caption" 
                 sx={{ 
                   opacity: 0.7,
-                  transition: 'color 0.3s ease',
-                  '.MuiBox-root:hover &': {
-                    color: social.color,
-                  },
+                  color: social.color,
+                  display: 'block',
                 }}
               >
                 {social.handle}
