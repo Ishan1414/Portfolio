@@ -21,7 +21,6 @@ jobs:
           export GITHUB_PAGES=true
           export NEXT_PUBLIC_BASE_PATH=/Portfolio
           npm run build
-          npm run export
         env:
           CI: false
 
