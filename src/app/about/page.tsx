@@ -1,11 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Typography, IconButton, Link } from '@mui/material';
 import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
 export default function AboutPage() {
+  // Set document title
+  useEffect(() => {
+    document.title = "About | Ishan's Portfolio";
+  }, []);
+
   return (
     <Box
       component={motion.div}

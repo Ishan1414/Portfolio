@@ -58,6 +58,11 @@ const experienceData: ExperienceItem[] = [
 export default function Experience() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
 
+  // Set document title
+  useEffect(() => {
+    document.title = "Experience | Ishan's Portfolio";
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

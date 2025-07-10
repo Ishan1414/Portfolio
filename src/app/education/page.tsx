@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Box, 
   Typography, 
@@ -44,6 +44,11 @@ export default function EducationPage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [expandedEducation, setExpandedEducation] = useState<number | null>(null);
   const [expandedCert, setExpandedCert] = useState<number | null>(null);
+
+  // Set document title
+  useEffect(() => {
+    document.title = "Education | Ishan's Portfolio";
+  }, []);
 
   const handleEducationToggle = (id: number) => {
     setExpandedEducation(expandedEducation === id ? null : id);
@@ -140,7 +145,6 @@ export default function EducationPage() {
       topics: ["Deep Learning", "Computer Vision", "Real-time Detection", "Security Systems"]
     }
   ];
-
 
   return (
     <Box sx={{ 

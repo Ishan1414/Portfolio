@@ -20,6 +20,11 @@ export default function ContactPage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isVisible, setIsVisible] = useState(false);
 
+  // Set document title
+  useEffect(() => {
+    document.title = "Contact | Ishan's Portfolio";
+  }, []);
+
   // Set components to visible after a small delay to trigger animations
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 100);

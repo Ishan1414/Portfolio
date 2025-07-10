@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Box, 
   Typography, 
@@ -36,6 +36,11 @@ import { projects, Project } from '../../../data/projects';
 export default function ProjectsPage() {
   const theme = useTheme();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  // Set document title
+  useEffect(() => {
+    document.title = "Projects | Ishan's Portfolio";
+  }, []);
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
