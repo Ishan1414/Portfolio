@@ -10,6 +10,8 @@ import ParticleBackground from '@/components/ParticleBackground'
 import NewLoaderAnimation from '@/components/NewLoaderAnimation'
 import { Box } from '@mui/material'
 import { usePathname } from 'next/navigation'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -57,6 +59,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               {children}
             </Box>
           )}
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
