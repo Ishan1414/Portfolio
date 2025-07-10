@@ -36,25 +36,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <NewLoaderAnimation finishLoading={handleFinishLoading} />
           ) : (
             <Box sx={{ position: 'relative', minHeight: '100vh' }}>
-              {/* Particle Background on all pages except landing page */}
-              {!isLandingPage && (
-                <Box sx={{ 
-                  position: 'fixed', 
-                  top: 0, 
-                  left: 0, 
-                  right: 0, 
-                  bottom: 0, 
-                  zIndex: -1,
-                  overflow: 'hidden'
-                }}>
-                  <ParticleBackground 
-                    particleCount={60} 
-                    colorPalette={['#FFD700', '#FFA500', '#ffffff']} 
-                    includeShapes={true} 
-                    interactive={true} 
-                  />
-                </Box>
-              )}
+              {/* Particle Background on all pages */}
+              <Box sx={{ 
+                position: 'fixed', 
+                top: 0, 
+                left: 0, 
+                right: 0, 
+                bottom: 0, 
+                zIndex: -1,
+                overflow: 'hidden'
+              }}>
+                <ParticleBackground 
+                  particleCount={60} 
+                  colorPalette={['#FFD700', '#FFA500', '#ffffff']} 
+                  includeShapes={true} 
+                  interactive={true} 
+                />
+              </Box>
               <Navbar />
               {children}
             </Box>
