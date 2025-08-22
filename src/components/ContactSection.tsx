@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Typography, Button, Container, Card, CardContent, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Email, Phone, LocationOn, GitHub, LinkedIn, X, Send } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 const contactInfo = [
   {
@@ -17,7 +18,7 @@ const contactInfo = [
   {
     icon: <Phone sx={{ fontSize: 32 }} />,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
+    value: '+1 (930) 333-2724',
     href: 'tel:+15551234567',
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accent: '#f093fb',
@@ -25,7 +26,7 @@ const contactInfo = [
   {
     icon: <LocationOn sx={{ fontSize: 32 }} />,
     title: 'Location',
-    value: 'New York, NY',
+    value: 'San Francisco, CA',
     href: '#',
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     accent: '#4facfe',
@@ -54,6 +55,12 @@ const socialLinks = [
 ];
 
 export default function ContactSection() {
+  const router = useRouter();
+
+  const handleSendMessage = () => {
+    router.push('/contact');
+  };
+
   return (
     <Box
       sx={{
@@ -251,7 +258,7 @@ export default function ContactSection() {
               variant="contained"
               size="large"
               startIcon={<Send />}
-              href="mailto:ishanvsarode@gmail.com"
+              onClick={handleSendMessage}
               sx={{
                 background: 'linear-gradient(45deg, #FFD700, #FFA500)',
                 color: '#000',

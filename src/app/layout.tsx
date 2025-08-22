@@ -44,7 +44,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 right: 0, 
                 bottom: 0, 
                 zIndex: -1,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                filter: {
+                  xs: 'blur(2px)', // Blur on mobile
+                  sm: 'blur(1px)', // Slight blur on tablet
+                  md: 'none' // No blur on desktop
+                }
               }}>
                 <ParticleBackground 
                   particleCount={60} 

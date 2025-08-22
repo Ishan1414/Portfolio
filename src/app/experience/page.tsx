@@ -15,6 +15,19 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
+    company: "PreBuild Technologies LLC",
+    position: "Software Developer Intern",
+    duration: "May 2024 – Aug 2024",
+    location: "WY, USA",
+    description: [
+      "Developed efficient Java modules for construction platform, cutting latency by 20% & improving system performance",
+      "Optimized Java microservices to handle 2X concurrent user load, reducing response times significantly",
+      "Established a resilient error handling and logging framework throughout Java applications, curtailing critical incidents by 75% & ensuring seamless operation of construction management tools",
+      "Delivered RESTful APIs in an Agile environment, using API-First Development, saving 20+ work hours weekly"
+    ],
+    technologies: ["Java", "Spring", "REST APIs", "Microservices", "Agile", "API-First Development", "Error Handling", "Logging"]
+  },
+  {
     company: "IDeaS - A SAS Company",
     position: "Associate Software Developer Intern",
     duration: "Jul 2022 – Jun 2023",

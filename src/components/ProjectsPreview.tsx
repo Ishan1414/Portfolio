@@ -7,6 +7,7 @@ import { ArrowForward, Launch, GitHub, NavigateBefore, NavigateNext } from '@mui
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { projects, Project } from '../../data/projects';
+import { useRouter } from 'next/navigation';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -18,13 +19,10 @@ export default function ProjectsPreview() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const router = useRouter();
 
   const handleViewAllProjects = () => {
-    // Navigate to projects section
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/projects');
   };
 
   return (

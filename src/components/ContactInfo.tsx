@@ -267,7 +267,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ visible }) => {
                 },
               }}
             >
-              Chicago, IL
+              San Francisco, CA
             </Typography>
           </Box>
         </Box>

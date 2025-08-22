@@ -4,8 +4,18 @@ import React from 'react';
 import { Box, Typography, Button, Card, CardContent, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ArrowForward, Work, CalendarToday } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 const experiences = [
+  {
+    company: 'PreBuild Technologies LLC',
+    position: 'Software Developer Intern',
+    duration: 'May 2024 – Aug 2024',
+    type: 'Remote',
+    skills: ['Java', 'Spring', 'REST APIs', 'Microservices', 'Agile', 'API-First Development'],
+    gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+    impact: '20% latency reduction achieved',
+  },
   {
     company: 'IDeaS - A SAS Company',
     position: 'Associate Software Developer Intern',
@@ -36,12 +46,10 @@ const experiences = [
 ];
 
 export default function ExperiencePreview() {
+  const router = useRouter();
+
   const handleViewFullExperience = () => {
-    // Navigate to experience section
-    const experienceSection = document.getElementById('experience');
-    if (experienceSection) {
-      experienceSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/experience');
   };
 
   return (
@@ -117,7 +125,7 @@ export default function ExperiencePreview() {
         <Box 
           sx={{ 
             display: 'grid', 
-            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr 1fr' },
             gap: 4,
             mb: 8 
           }}

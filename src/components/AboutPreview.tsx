@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Typography, Button, Card, CardContent } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ArrowForward, School, Work, Code, EmojiEvents } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 const highlights = [
   {
@@ -29,12 +30,10 @@ const highlights = [
 ];
 
 export default function AboutPreview() {
+  const router = useRouter();
+
   const handleLearnMore = () => {
-    // Navigate to about section - you can implement router navigation here
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/about');
   };
 
   return (

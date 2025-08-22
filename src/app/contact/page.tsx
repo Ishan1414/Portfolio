@@ -14,6 +14,7 @@ import ContactForm from '@/components/ContactForm';
 import ContactInfo from '@/components/ContactInfo';
 import SocialMediaSection from '@/components/SocialMediaSection';
 import { Email } from '@mui/icons-material';
+import Footer from '@/components/Footer';
 
 export default function ContactPage() {
   const theme = useTheme();
@@ -118,6 +119,9 @@ export default function ContactPage() {
           </Box>
         </Box>
       </Container>
+      
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 }

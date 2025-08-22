@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { Box, Typography, IconButton, Link } from '@mui/material';
 import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   // Set document title
@@ -502,6 +503,9 @@ export default function AboutPage() {
           </Box>
         </Box>
       </Box>
+      
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 }

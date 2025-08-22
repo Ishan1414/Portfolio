@@ -38,6 +38,7 @@ import {
   MenuBook,
   OpenInNew
 } from '@mui/icons-material';
+import Footer from '@/components/Footer';
 
 export default function EducationPage() {
   const theme = useTheme();
@@ -687,6 +688,9 @@ export default function EducationPage() {
           </Box>
         </Box>
       </Container>
+      
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 }

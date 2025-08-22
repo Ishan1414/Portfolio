@@ -32,6 +32,7 @@ import {
   Close 
 } from '@mui/icons-material';
 import { projects, Project } from '../../../data/projects';
+import Footer from '@/components/Footer';
 
 export default function ProjectsPage() {
   const theme = useTheme();
@@ -555,6 +556,9 @@ export default function ProjectsPage() {
           </Box>
         </Modal>
       </Container>
+      
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 }
