@@ -15,56 +15,55 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
+    company: "METY Technology",
+    position: "Software Engineer",
+    duration: "Jun 2025 – Present",
+    location: "Remote, USA",
+    description: [
+      "Built React, TypeScript UI and Python REST for MyYouthSpan (AI-driven longevity and wellness platform), cutting LCP 35% and bundle size 28%",
+      "Pioneered GTM by building demos, instrumenting analytics by integrating Hubspot and onboarding pilot orgs",
+      "Launched Orgs and Families flows which improved cohort activation by 25%, decreased failed renewals to 33%, and shortened admin setup to 10 min"
+    ],
+    technologies: ["React", "TypeScript", "Python", "REST APIs", "Hubspot", "Analytics", "UI/UX", "Performance Optimization"]
+  },
+  {
     company: "PreBuild Technologies LLC",
     position: "Software Developer Intern",
     duration: "May 2024 – Aug 2024",
     location: "WY, USA",
     description: [
-      "Developed efficient Java modules for construction platform, cutting latency by 20% & improving system performance",
-      "Optimized Java microservices to handle 2X concurrent user load, reducing response times significantly",
-      "Established a resilient error handling and logging framework throughout Java applications, curtailing critical incidents by 75% & ensuring seamless operation of construction management tools",
-      "Delivered RESTful APIs in an Agile environment, using API-First Development, saving 20+ work hours weekly"
+      "Built & optimized a React and TypeScript web app, sustaining 2× concurrent sessions and cutting latency by 20%",
+      "Implemented resilient error handling and structured logging/alerts, reducing critical incidents 75%",
+      "Delivered RESTful APIs, enabling rapid integration with customer-facing tools and saving 20+ dev hours weekly",
+      "Deployed on AWS ECS with Terraform + CI/CD, improving scalability and safe, repeatable releases"
     ],
-    technologies: ["Java", "Spring", "REST APIs", "Microservices", "Agile", "API-First Development", "Error Handling", "Logging"]
+    technologies: ["React", "TypeScript", "REST APIs", "AWS", "ECS", "Terraform", "CI/CD", "Error Handling", "Logging"]
   },
   {
     company: "IDeaS - A SAS Company",
     position: "Associate Software Developer Intern",
     duration: "Jul 2022 – Jun 2023",
-    location: "Hybrid",
+    location: "Hybrid, USA",
     description: [
-      "Engineered automated onboarding functionality using Java, MSSQL, REST APIs, and Vaadin, reducing onboarding time by 85% for a major client in the company's largest G3 project",
+      "Engineered automated onboarding functionality using Node.js, MySQL, REST APIs, and React, reducing onboarding time by 85% for a major client in the company's largest G3 project",
       "Developed a test environment on AWS with Kubernetes and Docker, reducing storage by 57% and test time by 42%",
-      "Wrote comprehensive Unit and Integration tests with JUnit and Mockito leading to 81% code coverage of components",
+      "Participated in Agile sprint demos and simulated on-call rotations, supporting production code and learning high-availability operations",
       "Improved the CI/CD pipeline and automation flow, leading to a 33% decrease in run-time of automation tests"
     ],
-    technologies: ["Java", "MSSQL", "REST APIs", "AWS", "Kubernetes", "Docker", "JUnit", "Vaadin", "Mockito"]
+    technologies: ["Node.js", "MySQL", "REST APIs", "React", "AWS", "Kubernetes", "Docker", "CI/CD", "Agile"]
   },
   {
-    company: "Powermech Eng Systems",
+    company: "Vridhi Enterprises",
     position: "Full Stack Engineer Intern",
     duration: "Jan 2022 – Jun 2022",
-    location: "Remote",
+    location: "Pune, India",
     description: [
       "Led UI development of Product Dashboard from prototyping in Figma to developing in React JS with Material UI",
       "Defined a comprehensive REST API for user management functionality using Java Spring boot MVC architecture",
       "Implemented data encryption in MongoDB for user authentication, enhancing security and protecting sensitive data",
       "Wrote 50+ E2E integration tests in Cypress and 80+ Unit tests in JUnit for backend achieving 90% code coverage"
     ],
-    technologies: ["React JS", "Material UI", "REST API", "Spring Boot", "MongoDB", "Cypress", "JUnit", "Figma"]
-  },
-  {
-    company: "Vridhi Enterprises",
-    position: "Web Developer Intern",
-    duration: "May 2021 – Aug 2021",
-    location: "Pune, MH, India",
-    description: [
-      "Revamped website with advanced HTML5, CSS3, JavaScript, Bootstrap, achieving 50% increase in user reach",
-      "Implemented responsive design principles for optimal performance across devices, launching the website on AWS S3",
-      "Applied SEO best practices to improve website visibility and organic search rankings, contributing to increased traffic",
-      "Conducted performance optimization, reducing page load time by 30% through code minification and image compression"
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "AWS S3", "SEO"]
+    technologies: ["React JS", "Material UI", "REST API", "Spring Boot", "Java", "MongoDB", "Cypress", "JUnit", "Figma"]
   }
 ];
 

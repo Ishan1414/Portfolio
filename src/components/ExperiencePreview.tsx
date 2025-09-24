@@ -8,11 +8,20 @@ import { useRouter } from 'next/navigation';
 
 const experiences = [
   {
+    company: 'METY Technology',
+    position: 'Software Engineer',
+    duration: 'Jun 2025 – Present',
+    type: 'Remote',
+    skills: ['React', 'TypeScript', 'Python', 'REST APIs', 'Hubspot', 'Analytics'],
+    gradient: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+    impact: '35% LCP reduction achieved',
+  },
+  {
     company: 'PreBuild Technologies LLC',
     position: 'Software Developer Intern',
     duration: 'May 2024 – Aug 2024',
     type: 'Remote',
-    skills: ['Java', 'Spring', 'REST APIs', 'Microservices', 'Agile', 'API-First Development'],
+    skills: ['React', 'TypeScript', 'AWS', 'Terraform', 'CI/CD', 'REST APIs'],
     gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
     impact: '20% latency reduction achieved',
   },
@@ -21,27 +30,18 @@ const experiences = [
     position: 'Associate Software Developer Intern',
     duration: 'Jul 2022 – Jun 2023',
     type: 'Hybrid',
-    skills: ['Java', 'MSSQL', 'REST APIs', 'AWS', 'Kubernetes', 'Docker', 'JUnit'],
+    skills: ['Node.js', 'MySQL', 'REST APIs', 'AWS', 'Kubernetes', 'Docker'],
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     impact: '85% reduction in onboarding time',
   },
   {
-    company: 'Powermech Eng Systems',
+    company: 'Vridhi Enterprises',
     position: 'Full Stack Engineer Intern',
     duration: 'Jan 2022 – Jun 2022',
     type: 'Remote',
-    skills: ['React JS', 'Material UI', 'REST API', 'Spring Boot', 'MongoDB', 'Cypress'],
+    skills: ['React JS', 'Material UI', 'Java', 'Spring Boot', 'MongoDB', 'Cypress'],
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     impact: '90% code coverage achieved',
-  },
-  {
-    company: 'Vridhi Enterprises',
-    position: 'Web Developer Intern',
-    duration: 'May 2021 – Aug 2021',
-    type: 'On-site',
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'AWS S3', 'SEO'],
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    impact: '50% increase in user reach',
   },
 ];
 

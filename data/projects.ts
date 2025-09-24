@@ -26,6 +26,29 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Student Life Assistance Project (S.L.A.P)',
+    category: 'Full-Stack Platform',
+    technologies: ['Next.js', 'Spring Boot', 'PostgreSQL', 'TypeScript', 'Docker', 'GitHub Actions'],
+    description: 'Full-stack platform for student tasks, expenses, and calendar management with strong security',
+    longDescription: 'A comprehensive platform designed to help students manage tasks, track expenses, and organize their calendar. The application features JWT authentication, role-based access control (RBAC), and hardened security measures. Implemented with Docker containerization and CI/CD pipeline for seamless deployment.',
+    icon: Web,
+    gradient: 'linear-gradient(135deg, #6E48AA 0%, #9D50BB 100%)',
+    accent: '#6E48AA',
+    features: ['JWT Authentication', 'Docker Containerization', 'CI/CD Pipeline'],
+    impact: 'Serving 20 active users with optimized performance',
+    githubUrl: 'https://github.com/ishansarode/student-life-assistance',
+    liveUrl: 'https://slap-demo.vercel.app',
+    featured: true,
+    challenges: [
+      'Implementing robust security with CORS and Spring Security',
+      'Resolving double-slash and TLS edge-case failures',
+      'Setting up TypeScript type generation for REST API'
+    ],
+    timeline: '4 months',
+    teamSize: 'Solo project'
+  },
+  {
+    id: 2,
     title: 'Smart Rental Management System',
     category: 'Full-Stack Platform',
     technologies: ['React.js', 'Node.js', 'PostgreSQL', 'TypeScript', 'Cypress', 'Selenium'],
@@ -48,7 +71,7 @@ export const projects: Project[] = [
     teamSize: 'Team of 3'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Movie Booking Management System',
     category: 'MERN Stack Application',
     technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
@@ -71,7 +94,7 @@ export const projects: Project[] = [
     teamSize: 'Solo project'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Airport Database Management System',
     category: 'Database Application',
     technologies: ['MySQL', 'React', 'Node.js'],
@@ -94,7 +117,7 @@ export const projects: Project[] = [
     teamSize: 'Team of 2'
   },
   {
-    id: 4,
+    id: 5,
     title: 'E-Commerce Platform',
     category: 'Web Application',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
@@ -122,7 +145,7 @@ export const projects: Project[] = [
     teamSize: 'Solo project'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Mobile Task Manager',
     category: 'Mobile App',
     technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
